@@ -12,4 +12,7 @@ public interface UserService {
 
     //登陆用户
     public boolean login(User user);
+
+    //修改密碼
+    public boolean changepass(User user);
 }

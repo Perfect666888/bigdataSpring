@@ -17,4 +17,7 @@ public interface UserDao {
     //登陆
     public List<User> select(User user);
 
+    //修改密碼
+    public int changepass(User user);
+
 }

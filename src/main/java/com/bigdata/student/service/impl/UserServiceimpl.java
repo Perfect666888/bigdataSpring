@@ -46,4 +46,16 @@ public class UserServiceimpl implements UserService {
         //返回判断是否为空结果
         return lists.isEmpty();
     }
+
+    @Override
+    public boolean changepass(User user) {
+        //修改密碼
+        int changepass = userDao.changepass(user);
+        //修改成功
+        if(changepass>0){
+            return true;
+        }
+
+        return false;
+    }
 }

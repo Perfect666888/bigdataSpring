@@ -42,4 +42,14 @@ public class UserDaoImpl implements UserDao {
 
         return lists;
     }
+
+    @Override
+    public int changepass(User user) {
+        //創建修改sql语句
+        String sql = "UPDATE user set password=? where name=?";
+        //调用更新方法
+        int update = DBUtils.update(sql, user.getPassword(), user.getUsername());
+        //返回更新结果
+        return update;
+    }
 }
